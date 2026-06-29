@@ -3,28 +3,25 @@
     <div class="container">
       <h2 class="section-title">Experiencia Laboral</h2>
       <div class="experience-list">
-        <div 
-          v-for="job in experience" 
-          :key="job.id"
-          class="job-card"
-          @click="$emit('select-job', job)"
-          role="button"
-          tabindex="0"
-          @keypress.enter="$emit('select-job', job)"
-        >
-          <div class="job-header">
-            <h3>{{ job.title }}</h3>
-            <span class="company">{{ job.company }}</span>
-          </div>
-          <p class="date">{{ job.date }}</p>
-          <p class="description">{{ job.description }}</p>
-          <div class="tech-preview">
-            <span v-for="(tech, index) in job.technologies.slice(0, 3)" :key="index" class="tech-tag">
-              {{ tech }}
-            </span>
-            <span v-if="job.technologies.length > 3" class="tech-more">
-              +{{ job.technologies.length - 3 }}
-            </span>
+        <div v-for="job in experience" :key="job.id" class="job-card" @click="$emit('select-job', job)" role="button"
+          tabindex="0" @keypress.enter="$emit('select-job', job)">
+          <div class="job-bg" v-if="job.image" :style="{ backgroundImage: `url(${job.image})` }"></div>
+
+          <div class="job-content">
+            <div class="job-header">
+              <h3>{{ job.title }}</h3>
+              <span class="company">{{ job.company }}</span>
+            </div>
+            <p class="date">{{ job.date }}</p>
+            <p class="description">{{ job.description }}</p>
+            <div class="tech-preview">
+              <span v-for="(tech, index) in job.technologies.slice(0, 3)" :key="index" class="tech-tag">
+                {{ tech }}
+              </span>
+              <span v-if="job.technologies.length > 3" class="tech-more">
+                +{{ job.technologies.length - 3 }}
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -80,19 +77,33 @@ defineEmits<{
   border-left: 4px solid var(--accent);
   cursor: pointer;
   transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.job-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px) brightness(0.5);
+  z-index: 0;
+  opacity: 0.1;
+  width: 60%;
+  padding:100px;
+}
+
+.job-content {
+  position: relative;
+  z-index: 1;
 }
 
 .job-card:hover {
   transform: translateX(5px);
   box-shadow: var(--shadow);
-  background: var(--accent);
-  color: white;
-}
-
-.job-card:hover .company,
-.job-card:hover .date,
-.job-card:hover .description {
-  color: inherit;
 }
 
 .job-header {
@@ -141,19 +152,10 @@ defineEmits<{
   font-weight: 500;
 }
 
-.job-card:hover .tech-tag {
-  background: rgba(255, 255, 255, 0.2);
-  color: inherit;
-}
-
 .tech-more {
   color: var(--text-secondary);
   font-size: 0.75rem;
   font-weight: 500;
-}
-
-.job-card:hover .tech-more {
-  color: inherit;
 }
 
 @media (max-width: 768px) {

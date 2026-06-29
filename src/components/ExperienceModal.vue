@@ -3,35 +3,48 @@
     <div class="modal-overlay" @click="$emit('close')">
       <div class="modal" @click.stop ref="modalContent">
         <button @click="$emit('close')" class="close-btn" aria-label="Close modal">✕</button>
+        <div class="modal-content">
 
-        <h2>{{ job.title }}</h2>
-        <p class="company-modal">{{ job.company }} • {{ job.date }}</p>
+          <div class="company-header">
+            <img v-if="job.logo" :src="job.logo" :alt="`${job.company} logo`" class="company-logo" />
+            <div class="company-info">
+              <h2>{{ job.title }}</h2>
+              <p class="company-modal">{{ job.company }} • {{ job.date }}</p>
 
-        <div class="details-grid">
-          <!-- Tecnologías -->
-          <div class="details-section">
-            <h3>Tecnologías Usadas</h3>
-            <div class="tech-tags">
-              <span v-for="tech in job.technologies" :key="tech" class="tag">
-                {{ tech }}
-              </span>
+              <a v-if="job.website" :href="job.website" target="_blank" rel="noopener noreferrer" class="company-link">
+                <Icon icon="line-md:link" /> Visitar sitio web
+              </a>
+
+              <a v-if="job.linkedin" :href="job.linkedin" target="_blank" rel="noopener noreferrer"
+                class="company-link">
+                <Icon icon="line-md:linkedin" /> LinkedIn
+              </a>
             </div>
           </div>
 
-          <!-- Proyectos -->
-          <div class="details-section">
-            <h3>Proyectos</h3>
-            <ul class="projects-list">
-              <li v-for="project in job.projects" :key="project">
-                {{ project }}
-              </li>
-            </ul>
-          </div>
+          <div class="details-grid">
+            <div class="details-section">
+              <h3>Tecnologías Usadas</h3>
+              <div class="tech-tags">
+                <span v-for="tech in job.technologies" :key="tech" class="tag">
+                  {{ tech }}
+                </span>
+              </div>
+            </div>
 
-          <!-- Descripción completa -->
-          <div class="details-section full-width">
-            <h3>Descripción Detallada</h3>
-            <p>{{ job.fullDescription }}</p>
+            <div class="details-section">
+              <h3>Proyectos</h3>
+              <ul class="projects-list">
+                <li v-for="project in job.projects" :key="project">
+                  {{ project }}
+                </li>
+              </ul>
+            </div>
+
+            <div class="details-section full-width">
+              <h3>Descripción Detallada</h3>
+              <p>{{ job.fullDescription }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -43,6 +56,7 @@
 import { nextTick, ref } from 'vue'
 import anime from 'animejs'
 import type { JobExperience } from '../types'
+import { Icon } from '@iconify/vue';
 
 const props = defineProps<{
   job: JobExperience
@@ -85,13 +99,35 @@ nextTick(() => {
 .modal {
   background: var(--bg-primary);
   border-radius: 15px;
-  padding: 40px;
   max-width: 600px;
   width: 90%;
   max-height: 80vh;
-  overflow-y: auto;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modal-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+  flex: 1;
+  padding: 40px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: var(--transition);
+  z-index: 10;
 }
 
 .close-btn {
@@ -111,15 +147,51 @@ nextTick(() => {
   transform: rotate(90deg);
 }
 
-.modal h2 {
+.company-header {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid var(--border);
+  align-items: flex-start;
+}
+
+.company-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  background: var(--bg-secondary);
+  border-radius: 10px;
+  padding: 10px;
+  flex-shrink: 0;
+}
+
+.company-info h2 {
   color: var(--accent);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .company-modal {
   color: var(--text-secondary);
-  margin-bottom: 30px;
   font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.company-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: rgba(0, 102, 204, 0.1);
+  margin-right: 10px;
+}
+
+.company-link:hover {
+  background: rgba(0, 102, 204, 0.2);
+  transform: translateX(3px);
 }
 
 .details-grid {
@@ -175,6 +247,7 @@ nextTick(() => {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -185,6 +258,7 @@ nextTick(() => {
     opacity: 0;
     transform: translateX(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -193,7 +267,28 @@ nextTick(() => {
 
 @media (max-width: 768px) {
   .modal {
-    padding: 20px;
+    padding: 5px;
+  }
+
+  .close-btn {
+    top: 10px;
+    right: 25px;
+    font-size: 1.2rem;
+  }
+
+  .company-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .company-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .modal-content {
+    padding: 40px 20px 20px;
   }
 }
 </style>

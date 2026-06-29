@@ -2,7 +2,6 @@
   <header class="header">
     <div class="container">
       <div class="header-content">
-        <!-- Profile Image -->
         <div class="profile-section">
           <img v-if="profile.image" :src="profile.image" :alt="profile.name" class="profile-image" />
           <div class="profile-info">
@@ -11,18 +10,16 @@
           </div>
         </div>
 
-        <!-- Theme Toggle & CV Download -->
         <div class="actions">
           <a v-if="profile.cvPdf" :href="profile.cvPdf" download class="download-cv-btn" title="Descargar CV">
-            📄 Descargar CV
+            <Icon icon="pepicons-pop:cv" class="icon" />Descargar CV
           </a>
           <button @click="$emit('toggle-theme')" class="theme-toggle" :title="isDarkMode ? 'Light mode' : 'Dark mode'">
-            {{ isDarkMode ? '☀️' : '🌙' }}
+            <Icon :icon="isDarkMode ? 'mdi:weather-sunny' : 'mdi:weather-night'" class="icon" />
           </button>
         </div>
       </div>
 
-      <!-- Social Links -->
       <div class="social-links">
         <a v-for="link in profile.socialLinks" :key="link.platform" :href="link.url" target="_blank"
           rel="noopener noreferrer" class="social-link" :title="link.platform">
@@ -166,6 +163,10 @@ defineEmits<{
   transform: translateY(-3px);
   box-shadow: var(--shadow);
   opacity: 0.9;
+}
+
+.social-icon {
+  margin-right: 5px;
 }
 
 @media (max-width: 768px) {

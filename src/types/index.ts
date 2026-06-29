@@ -7,6 +7,10 @@ export interface JobExperience {
   fullDescription: string
   technologies: string[]
   projects: string[]
+  image: string
+  logo: string
+  website?: string
+  linkedin?: string
 }
 
 export interface SkillCategory {
