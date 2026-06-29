@@ -1,0 +1,112 @@
+{
+  "profile": {
+    "name": "Matías Alberto Morales",
+    "title": "Full Stack Developer",
+    "bio": "Desarrollador Full Stack apasionado por crear soluciones innovadoras",
+    "image": "/profile.jpg",
+    "cvPdf": "/cv_matias_morales.pdf",
+    "email": "matiasmorales.dev@gmail.com",
+    "phone": "+54 299 5270858",
+    "location": "Cinco Saltos / Río Negro, Argentina",
+    "birthDate": "11 de Diciembre 1991",
+    "socialLinks": [
+      {
+        "platform": "LinkedIn",
+        "url": "https://linkedin.com/in/matiasmoralesdev",
+        "icon": "simple-icons:linkedin"
+      },
+      {
+        "platform": "GitHub",
+        "url": "https://github.com/matiasmoralesdev",
+        "icon": "simple-icons:github"
+      },
+      {
+        "platform": "Email",
+        "url": "mailto:matiasmorales.dev@gmail.com",
+        "icon": "mdi:email"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "id": 1,
+      "title": "Desarrollador Full Stack .NET",
+      "company": "Syndesis IT",
+      "date": "Enero 2023 - Actualidad",
+      "description": "Desarrollo de aplicaciones web con ASP.NET Core, React y NESTJS",
+      "fullDescription": "Responsable del desarrollo completo de aplicaciones empresariales utilizando tecnologías modernas del stack .NET. Implementación de APIs RESTful, componentes React y arquitecturas escalables con base de datos SQL Server.",
+      "technologies": ["C#", ".NET Core", "ASP.NET", "React", "TypeScript", "SQL Server", "Azure", "Docker"],
+      "projects": [
+        "Sistema de gestión de proyectos empresariales",
+        "API de integraciones empresariales con terceros",
+        "Dashboard de análisis en tiempo real"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Desarrollador .NET",
+      "company": "IT Comahue",
+      "date": "Enero 2022 - Diciembre 2022",
+      "description": "Desarrollo de aplicaciones .NET Fullstack",
+      "fullDescription": "Creación y mantenimiento de aplicaciones de escritorio y web utilizando el framework .NET, implementación de bases de datos robustas y lógica de negocio compleja en entornos empresariales.",
+      "technologies": ["C#", ".NET Framework", "WinForms", "SQL Server", "JavaScript", "Entity Framework"],
+      "projects": [
+        "Aplicación de gestión empresarial multiplataforma",
+        "Sistemas de reportes avanzados con exportación"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Desarrollador Full Stack",
+      "company": "Eximo S.A.",
+      "date": "2019 - 2022",
+      "description": "Desarrollo de aplicaciones web, móviles y APIs",
+      "fullDescription": "Desarrollo de soluciones completas incluyendo frontend, backend y aplicaciones móviles nativas. Trabajo con metodologías ágiles (Scrum) y entrega continua en ciclos cortos.",
+      "technologies": ["Java", "JavaScript", "Android", "PHP", "React", "MySQL", "Firebase", "REST APIs"],
+      "projects": [
+        "Aplicación móvil para retail con 500k+ descargas",
+        "Plataforma de e-commerce con pagos integrados",
+        "Sistemas de notificaciones en tiempo real"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "category": "Lenguajes de Programación",
+      "items": ["C#", "JavaScript", "TypeScript", "Java", "PHP", "Python", "Dart"]
+    },
+    {
+      "category": "Frontend",
+      "items": ["React", "Vue.js", "Angular", "HTML5", "CSS3", "Tailwind", "Material Design"]
+    },
+    {
+      "category": "Backend",
+      "items": ["ASP.NET Core", ".NET Framework", "Node.js", "Express", "NestJS", "Laravel"]
+    },
+    {
+      "category": "Bases de Datos",
+      "items": ["SQL Server", "MySQL", "PostgreSQL", "MongoDB", "Firebase"]
+    },
+    {
+      "category": "DevOps & Tools",
+      "items": ["Docker", "Git", "CI/CD", "Azure", "AWS", "Linux", "GitHub Actions"]
+    }
+  ],
+  "couses":[
+
+  ],
+  "education": [
+    {
+      "id": 1,
+      "degree": "Licenciatura en Ciencias de la Computación",
+      "institution": "Universidad Nacional del Comahue",
+      "year": "Pausado"
+    },
+    {
+      "id": 2,
+      "degree": "Técnico Químico",
+      "institution": "C.E.T N° 5 Dr Armando Novelli",
+      "year": "2010"
+    }
+  ]
+}

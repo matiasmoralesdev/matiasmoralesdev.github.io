@@ -35,53 +35,13 @@
 <script setup lang="ts">
 import type { JobExperience } from '../types'
 
+defineProps<{
+  experience: JobExperience[]
+}>()
+
 defineEmits<{
   'select-job': [job: JobExperience]
 }>()
-
-const experience: JobExperience[] = [
-  {
-    id: 1,
-    title: 'Desarrollador Full Stack .NET',
-    company: 'Syndesis IT',
-    date: 'Enero 2023 - Actualidad',
-    description: 'Desarrollo de aplicaciones web con ASP.NET Core, React y NESTJS',
-    fullDescription: 'Responsable del desarrollo completo de aplicaciones empresariales utilizando tecnologías modernas del stack .NET. Implementación de APIs RESTful, componentes React y arquitecturas escalables.',
-    technologies: ['C#', '.NET Core', 'ASP.NET', 'React', 'TypeScript', 'SQL Server', 'Azure'],
-    projects: [
-      'Sistema de gestión de proyectos',
-      'API de integraciones empresariales',
-      'Dashboard de análisis en tiempo real'
-    ]
-  },
-  {
-    id: 2,
-    title: 'Desarrollador .NET',
-    company: 'IT Comahue',
-    date: 'Enero 2022 - Diciembre 2022',
-    description: 'Desarrollo de aplicaciones .NET Fullstack',
-    fullDescription: 'Creación y mantenimiento de aplicaciones de escritorio y web utilizando el framework .NET, implementación de bases de datos y lógica de negocio compleja.',
-    technologies: ['C#', '.NET Framework', 'WinForms', 'SQL Server', 'JavaScript'],
-    projects: [
-      'Aplicación de gestión empresarial',
-      'Sistemas de reportes avanzados'
-    ]
-  },
-  {
-    id: 3,
-    title: 'Desarrollador Full Stack',
-    company: 'Expino S.A.',
-    date: '2019 - 2022',
-    description: 'Desarrollo de aplicaciones web, móviles y APIs',
-    fullDescription: 'Desarrollo de soluciones completas incluyendo frontend, backend y aplicaciones móviles nativas. Trabajo con metodologías ágiles y entrega continua.',
-    technologies: ['Java', 'JavaScript', 'Android', 'PHP', 'React', 'MySQL', 'Firebase'],
-    projects: [
-      'Aplicación móvil para retail',
-      'Plataforma de e-commerce',
-      'Sistemas de notificaciones en tiempo real'
-    ]
-  }
-]
 </script>
 
 <style scoped>

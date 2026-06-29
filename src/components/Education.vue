@@ -16,20 +16,9 @@
 <script setup lang="ts">
 import type { Education } from '../types'
 
-const education: Education[] = [
-  {
-    id: 1,
-    degree: 'Licenciatura en Ciencias de la Computación',
-    institution: 'Universidad Nacional del Comahue',
-    year: 'Pausado'
-  },
-  {
-    id: 2,
-    degree: 'Técnico Químico',
-    institution: 'C.E.T N° 5 Dr Armando Novelli',
-    year: '2010'
-  }
-]
+defineProps<{
+  education: Education[]
+}>()
 </script>
 
 <style scoped>

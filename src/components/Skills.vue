@@ -23,28 +23,9 @@
 <script setup lang="ts">
 import type { SkillCategory } from '../types'
 
-const skills: SkillCategory[] = [
-  {
-    category: 'Lenguajes de Programación',
-    items: ['C#', 'JavaScript', 'TypeScript', 'Java', 'PHP', 'Python']
-  },
-  {
-    category: 'Frontend',
-    items: ['React', 'Vue.js', 'Angular', 'HTML5', 'CSS3', 'Tailwind']
-  },
-  {
-    category: 'Backend',
-    items: ['ASP.NET Core', '.NET Framework', 'Node.js', 'Express', 'NestJS']
-  },
-  {
-    category: 'Bases de Datos',
-    items: ['SQL Server', 'MySQL', 'PostgreSQL', 'MongoDB']
-  },
-  {
-    category: 'DevOps & Tools',
-    items: ['Docker', 'Git', 'CI/CD', 'Azure', 'Linux']
-  }
-]
+defineProps<{
+  skills: SkillCategory[]
+}>()
 </script>
 
 <style scoped>
