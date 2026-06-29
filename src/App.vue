@@ -1,10 +1,10 @@
 <template>
   <div class="app" :class="{ 'dark-mode': isDarkMode }">
-    <Header :isDarkMode="isDarkMode" @toggle-theme="toggleDarkMode" />
-    <Experience @select-job="selectJob" />
+    <Header :isDarkMode="isDarkMode" :profile="curriculumData.profile" @toggle-theme="toggleDarkMode" />
+    <Experience :experience="curriculumData.experience" @select-job="selectJob" />
     <ExperienceModal v-if="selectedJob" :job="selectedJob" @close="selectedJob = null" />
-    <Skills />
-    <Education />
+    <Skills :skills="curriculumData.skills" />
+    <Education :education="curriculumData.education" />
     <Footer />
   </div>
 </template>
@@ -19,6 +19,8 @@ import Education from './components/Education.vue'
 import Footer from './components/Footer.vue'
 import { isDarkModeEnabled, initTheme } from './utils/theme'
 import type { JobExperience } from './types'
+import type { CurriculumDataFile } from './types/curriculum'
+import curriculumData from './data/curriculum.json'
 
 const isDarkMode = ref<boolean>(false)
 const selectedJob = ref<JobExperience | null>(null)
@@ -51,3 +53,4 @@ onMounted((): void => {
   transition: var(--transition);
 }
 </style>
+

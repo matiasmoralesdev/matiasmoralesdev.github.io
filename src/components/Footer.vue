@@ -2,12 +2,13 @@
   <footer class="footer">
     <div class="container">
       <p>© 2026 Matías Alberto Morales. Todos los derechos reservados.</p>
+      <p>Diseñado y desarrollado por <a href="https://matiasmoralesdev.github.io" target="_blank"
+          rel="noopener noreferrer">Matías Alberto Morales</a> en <a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer">Vue.js</a></p>
     </div>
   </footer>
 </template>
 
 <script setup lang="ts">
-// Footer component
 </script>
 
 <style scoped>
@@ -23,5 +24,11 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: var(--transition);
 }
 </style>
