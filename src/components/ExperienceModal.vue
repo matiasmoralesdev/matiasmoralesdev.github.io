@@ -22,6 +22,11 @@
             </div>
           </div>
 
+          <div class="details-section full-width description-section">
+            <h3>Descripción Detallada</h3>
+            <p>{{ job.fullDescription }}</p>
+          </div>
+
           <div class="tech-section">
             <h3>Tecnologías Usadas</h3>
             <div class="tech-tags">
@@ -38,7 +43,7 @@
                 <div v-for="project in job.projects" :key="project.title" class="project-card">
                   <h4 class="project-title">{{ project.title }}</h4>
                   <p class="project-description">{{ project.description }}</p>
-                  
+
                   <div v-if="project.contributions && project.contributions.length" class="project-contributions">
                     <strong>Mi Aporte:</strong>
                     <ul class="contributions-list">
@@ -47,7 +52,7 @@
                       </li>
                     </ul>
                   </div>
-                  
+
                   <div class="project-tech">
                     <span v-for="tech in project.technologies" :key="tech" class="tech-tag">
                       {{ tech }}
@@ -57,10 +62,7 @@
               </div>
             </div>
 
-            <div class="details-section full-width">
-              <h3>Descripción Detallada</h3>
-              <p>{{ job.fullDescription }}</p>
-            </div>
+
           </div>
         </div>
       </div>
@@ -115,7 +117,7 @@ nextTick(() => {
 .modal {
   background: var(--bg-primary);
   border-radius: 15px;
-  max-width: 800px;
+  max-width: 1000px;
   width: 90%;
   max-height: 80vh;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
@@ -233,6 +235,13 @@ nextTick(() => {
   font-size: 1.1rem;
   margin-bottom: 15px;
   color: var(--text-primary);
+}
+
+.description-section p {
+  color: var(--text-secondary);
+  line-height: 1.5;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
 }
 
 .tech-tags {
