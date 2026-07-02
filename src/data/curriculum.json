@@ -65,62 +65,102 @@
         {
           "title": "Repsol Descargos Web",
           "description": "Aplicación web, API y Webjobs para la gestión de Descargos de estaciones eléctricas",
-          "role": "",
-          "technologies": [".NET Framework 4.8", ".NET 8"]
+          "technologies": [".NET Framework 4.8", ".NET 8"],
+          "contributions": [
+            "Diseño y desarrollo de API REST para gestión de descargos",
+            "Implementación de Webjobs para procesamiento automático",
+            "Migración de .NET Framework 4.8 a .NET 8"
+          ]
         },
         {
           "title": "Repsol Descargos Mobile",
           "description": "Aplicación móvil para la gestión de Descargos de estaciones eléctricas",
-          "role": "",
-          "technologies": [".NET for Android"]
+          "technologies": [".NET for Android"],
+          "contributions": [
+            "Desarrollo de aplicación móvil con .NET MAUI para Android",
+            "Sincronización de datos offline-first",
+            "Integración con API de descargos"
+          ]
         },
         {
           "title": "Repsol SEOS Trabajos",
           "description": "Aplicación web para la gestión de trabajos de mantenimiento en estaciones eléctricas",
-          "role": "",
-          "technologies": [".NET Framework 4.8", "MySQL"]
+          "technologies": [".NET Framework 4.8", "MySQL"],
+          "contributions": [
+            "Desarrollo full-stack con ASP.NET MVC",
+            "Diseño de base de datos relacional en MySQL",
+            "Reportes y exportación de datos"
+          ]
         },
         {
           "title": "Repsol SEOS Trabajos Mobile",
           "description": "Aplicación móvil para la gestión de trabajos de mantenimiento en estaciones eléctricas",
-          "role": "",
-          "technologies": ["Java (Android)"]
+          "technologies": ["Java (Android)"],
+          "contributions": [
+            "Desarrollo de aplicación Android nativa en Java",
+            "Sincronización con API backend",
+            "Interfaz responsiva para múltiples dispositivos"
+          ]
         },
         {
           "title": "SEOS Trabajos MX",
           "description": "Aplicación web para la gestión de trabajos de mantenimiento en estaciones eléctricas",
-          "role": "",
-          "technologies": [".NET 8", "PostgreSQL"]
+          "technologies": [".NET 8", "PostgreSQL"],
+          "contributions": [
+            "Migración a .NET 8 y PostgreSQL",
+            "Optimización de consultas para mejor rendimiento",
+            "Implementación de auditoría y trazabilidad"
+          ]
         },
         {
           "title": "SEOS Trabajos MX Mobile",
           "description": "Aplicación móvil para la gestión de trabajos de mantenimiento en estaciones eléctricas",
-          "role": "",
-          "technologies": ["Java (Android)"]
+          "technologies": ["Java (Android)"],
+          "contributions": [
+            "Desarrollo multiplataforma en Java",
+            "Implementación de mapas y geolocalización",
+            "Comunicación con backend en tiempo real"
+          ]
         },
         {
           "title": "SinVisitas",
           "description": "Aplicación web para gestión de alquileres e inmuebles",
-          "role": "",
-          "technologies": ["React", "Node.js", "MongoDB", "PHP"]
+          "technologies": ["React", "Node.js", "MongoDB", "PHP"],
+          "contributions": [
+            "Desarrollo frontend con React y componentes reutilizables",
+            "Backend API con Node.js y Express",
+            "Modelado de datos NoSQL en MongoDB"
+          ]
         },
         {
           "title": "InnovaTracker",
           "description": "Aplicación web para la gestión de proyectos y tareas",
-          "role": "",
-          "technologies": ["Vue.js", "PostgreSQL", ".NET 8"]
+          "technologies": ["Vue.js", "PostgreSQL", ".NET 8"],
+          "contributions": [
+            "Desarrollo de interfaz interactiva con Vue.js 3",
+            "Backend con .NET 8 y Entity Framework Core",
+            "Sistema de notificaciones en tiempo real"
+          ]
         },
         {
           "title": "Equal",
           "description": "Aplicación web para la gestión de igualdad de género en empresas",
-          "role": "",
-          "technologies": ["Angular", "NestJS", "PostgreSQL", ".NET 8"]
+          "technologies": ["Angular", "NestJS", "PostgreSQL", ".NET 8"],
+          "contributions": [
+            "Arquitectura completa de microservicios con NestJS",
+            "Frontend robusto con Angular y TypeScript",
+            "Integración de múltiples backends (.NET y Node.js)"
+          ]
         },
         {
           "title": "IAltitude",
           "description": "Aplicación para gestionar sesiones de hipoxia intermitente y entrenamiento en altura en simuladores de vuelo y altura",
-          "role": "",
-          "technologies": [".NET 8", "WinForms"]
+          "technologies": [".NET 8", "WinForms"],
+          "contributions": [
+            "Desarrollo de aplicación desktop con WinForms",
+            "Gestión de sesiones y datos biométricos",
+            "Reportes y análisis de entrenamientos"
+          ]
         }
       ],
       "image": "/jobs/synit_bg.png",
@@ -147,12 +187,22 @@
         {
           "title": "Aplicación de gestión empresarial multiplataforma",
           "description": "Aplicación para gestionar diferentes aspectos de la empresa",
-          "technologies": ["C#", ".NET Framework", "WinForms", "SQL Server"]
+          "technologies": ["C#", ".NET Framework", "WinForms", "SQL Server"],
+          "contributions": [
+            "Desarrollo de módulos de negocio con WinForms",
+            "Diseño de base de datos relacional",
+            "Reportes con exportación a Excel y PDF"
+          ]
         },
         {
           "title": "Sistemas de reportes avanzados con exportación",
           "description": "Sistema para generar reportes avanzados con opciones de exportación",
-          "technologies": ["C#", ".NET Framework", "SQL Server"]
+          "technologies": ["C#", ".NET Framework", "SQL Server"],
+          "contributions": [
+            "Arquitectura de sistema de reportes personalizado",
+            "Optimización de consultas SQL complejas",
+            "Implementación de exportación a múltiples formatos"
+          ]
         }
       ],
       "image": "/jobs/comahue-bg.jpg",
@@ -177,7 +227,12 @@
         {
           "title": "IQuality",
           "description": "Sistema de gestión de calidad para empresas",
-          "technologies": ["C#", ".NET", "SQL Server", "JavaScript"]
+          "technologies": ["C#", ".NET", "SQL Server", "JavaScript"],
+          "contributions": [
+            "Desarrollo del módulo central de gestión de calidad",
+            "Integración de dashboards y reportes",
+            "Gestiona de usuarios y permisos del sistema"
+          ]
         }
       ],
       "image": "/jobs/eximo_bg.png",

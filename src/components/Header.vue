@@ -7,6 +7,8 @@
           <div class="profile-info">
             <h1>{{ profile.name }}</h1>
             <p class="subtitle">{{ profile.title }}</p>
+            <p class="subtitle-secondary">{{ profile.subtitle }}</p>
+            <p class="bio">{{ profile.bio }}</p>
           </div>
         </div>
 
@@ -90,6 +92,22 @@ defineEmits<{
 .subtitle {
   color: var(--text-secondary);
   font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.subtitle-secondary {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.bio {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  max-width: 400px;
+  line-height: 1.4;
+  margin-top: 8px;
 }
 
 .actions {

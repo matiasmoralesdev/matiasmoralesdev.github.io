@@ -29,6 +29,7 @@ export interface Courses {
 export interface Certification {
   name: string
   url: string
+  thumbnail?: string
 }
 
 export interface Education {
@@ -42,6 +43,7 @@ export interface Project {
   title: string
   description: string
   technologies: string[]
+  contributions?: string[]
 }
 
 export interface CurriculumData {

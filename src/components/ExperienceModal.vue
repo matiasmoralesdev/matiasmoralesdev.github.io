@@ -22,23 +22,39 @@
             </div>
           </div>
 
-          <div class="details-grid">
-            <div class="details-section">
-              <h3>Tecnologías Usadas</h3>
-              <div class="tech-tags">
-                <span v-for="tech in job.technologies" :key="tech" class="tag">
-                  {{ tech }}
-                </span>
-              </div>
+          <div class="tech-section">
+            <h3>Tecnologías Usadas</h3>
+            <div class="tech-tags">
+              <span v-for="tech in job.technologies" :key="tech" class="tag">
+                {{ tech }}
+              </span>
             </div>
+          </div>
 
-            <div class="details-section">
+          <div class="details-grid">
+            <div class="details-section full-width">
               <h3>Proyectos</h3>
-              <ul class="projects-list">
-                <li v-for="project in job.projects" :key="project.title">
-                  {{ project.title }} - {{ project.description }} - {{ project.technologies.join(', ') }}
-                </li>
-              </ul>
+              <div class="projects-container">
+                <div v-for="project in job.projects" :key="project.title" class="project-card">
+                  <h4 class="project-title">{{ project.title }}</h4>
+                  <p class="project-description">{{ project.description }}</p>
+                  
+                  <div v-if="project.contributions && project.contributions.length" class="project-contributions">
+                    <strong>Mi Aporte:</strong>
+                    <ul class="contributions-list">
+                      <li v-for="(contribution, idx) in project.contributions" :key="idx">
+                        {{ contribution }}
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div class="project-tech">
+                    <span v-for="tech in project.technologies" :key="tech" class="tech-tag">
+                      {{ tech }}
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="details-section full-width">
@@ -194,6 +210,20 @@ nextTick(() => {
   transform: translateX(3px);
 }
 
+.tech-section {
+  background: var(--bg-secondary);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  border-left: 4px solid var(--accent);
+}
+
+.tech-section h3 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: var(--text-primary);
+}
+
 .details-grid {
   display: grid;
   gap: 25px;
@@ -237,6 +267,121 @@ nextTick(() => {
   left: 0;
   color: var(--accent);
   font-weight: bold;
+}
+
+.contributions-list {
+  list-style: none;
+}
+
+.contributions-list li {
+  padding: 12px 0;
+  padding-left: 25px;
+  position: relative;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.contributions-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.contributions-list strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contributions-list p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.projects-container {
+  display: grid;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.project-card {
+  background: var(--bg-secondary);
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 3px solid var(--accent);
+  transition: var(--transition);
+}
+
+.project-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateX(3px);
+}
+
+.project-title {
+  color: var(--accent);
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+}
+
+.project-description {
+  color: var(--text-secondary);
+  margin: 0 0 12px 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.project-contributions {
+  margin-bottom: 12px;
+}
+
+.project-contributions strong {
+  display: block;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.project-contributions .contributions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-contributions .contributions-list li {
+  padding: 4px 0 4px 20px;
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.project-contributions .contributions-list li::before {
+  content: '→';
+  font-size: 1rem;
+  color: var(--accent);
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tech-tag {
+  background: rgba(0, 102, 204, 0.15);
+  color: var(--accent);
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  border: 1px solid rgba(0, 102, 204, 0.3);
+  transition: var(--transition);
+}
+
+.tech-tag:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
 }
 
 .full-width {

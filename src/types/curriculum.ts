@@ -8,6 +8,7 @@ import type {
 export interface ProfileData {
   name: string
   title: string
+  subtitle: string
   bio: string
   image: string
   cvPdf: string
