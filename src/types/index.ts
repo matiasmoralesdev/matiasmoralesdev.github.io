@@ -6,7 +6,7 @@ export interface JobExperience {
   description: string
   fullDescription: string
   technologies: string[]
-  projects: string[]
+  projects: Project[]
   image: string
   logo: string
   website?: string
@@ -18,6 +18,19 @@ export interface SkillCategory {
   items: string[]
 }
 
+export interface Courses {
+  name: string
+  institution: string
+  year: string
+  description: string
+  certifications: Certification[]
+}
+
+export interface Certification {
+  name: string
+  url: string
+}
+
 export interface Education {
   id: number
   degree: string
@@ -25,8 +38,15 @@ export interface Education {
   year: string
 }
 
+export interface Project {
+  title: string
+  description: string
+  technologies: string[]
+}
+
 export interface CurriculumData {
   experience: JobExperience[]
   skills: SkillCategory[]
   education: Education[]
+  courses: Courses[]
 }

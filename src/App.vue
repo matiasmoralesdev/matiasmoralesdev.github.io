@@ -4,6 +4,7 @@
     <Experience :experience="curriculumData.experience" @select-job="selectJob" />
     <ExperienceModal v-if="selectedJob" :job="selectedJob" @close="selectedJob = null" />
     <Skills :skills="curriculumData.skills" />
+    <Courses :courses="curriculumData.courses" />
     <Education :education="curriculumData.education" />
     <Footer />
   </div>
@@ -21,6 +22,7 @@ import { isDarkModeEnabled, initTheme } from './utils/theme'
 import type { JobExperience } from './types'
 import type { CurriculumDataFile } from './types/curriculum'
 import curriculumData from './data/curriculum.json'
+import Courses from './components/Courses.vue'
 
 const isDarkMode = ref<boolean>(false)
 const selectedJob = ref<JobExperience | null>(null)
@@ -53,4 +55,3 @@ onMounted((): void => {
   transition: var(--transition);
 }
 </style>
-

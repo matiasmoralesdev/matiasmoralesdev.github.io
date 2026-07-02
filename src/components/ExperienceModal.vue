@@ -35,8 +35,8 @@
             <div class="details-section">
               <h3>Proyectos</h3>
               <ul class="projects-list">
-                <li v-for="project in job.projects" :key="project">
-                  {{ project }}
+                <li v-for="project in job.projects" :key="project.title">
+                  {{ project.title }} - {{ project.description }} - {{ project.technologies.join(', ') }}
                 </li>
               </ul>
             </div>
@@ -99,7 +99,7 @@ nextTick(() => {
 .modal {
   background: var(--bg-primary);
   border-radius: 15px;
-  max-width: 600px;
+  max-width: 800px;
   width: 90%;
   max-height: 80vh;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);

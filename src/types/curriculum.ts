@@ -1,7 +1,8 @@
 import type { 
   JobExperience, 
   SkillCategory, 
-  Education 
+  Education, 
+  Courses
 } from './index'
 
 export interface ProfileData {
@@ -26,4 +27,5 @@ export interface CurriculumDataFile {
   experience: JobExperience[]
   skills: SkillCategory[]
   education: Education[]
+  courses: Courses[]
 }

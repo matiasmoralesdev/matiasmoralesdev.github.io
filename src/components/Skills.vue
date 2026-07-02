@@ -1,7 +1,7 @@
 <template>
   <section class="section skills-section">
     <div class="container">
-      <h2 class="section-title">Skills</h2>
+      <h2 class="section-title">Stack Tecnológico</h2>
       <div class="skills-grid">
         <div 
           v-for="skill in skills" 

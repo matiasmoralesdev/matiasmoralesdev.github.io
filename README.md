@@ -49,6 +49,7 @@ src/
 │   ├── Experience.vue      # Sección de experiencia
 │   ├── ExperienceModal.vue # Modal de detalles
 │   ├── Skills.vue          # Sección de habilidades
+│   ├── Courses.vue         # Sección de cursos
 │   ├── Education.vue       # Sección de educación
 │   └── Footer.vue          # Pie de página
 ├── types/

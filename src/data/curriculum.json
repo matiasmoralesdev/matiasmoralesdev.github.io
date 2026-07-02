@@ -1,9 +1,10 @@
 {
   "profile": {
     "name": "Matías Alberto Morales",
-    "title": "Full Stack Developer",
+    "title": "Senior Full Stack .NET Developer",
+    "subtitle": "Web • Mobile • Backend • DevOps",
     "bio": "Desarrollador Full Stack apasionado por crear soluciones innovadoras",
-    "image": "/profile.jpg",
+    "image": "/profile.png",
     "cvPdf": "/cv_matias_morales.pdf",
     "email": "matiasmorales.dev@gmail.com",
     "phone": "+54 299 5270858",
@@ -61,13 +62,66 @@
         "Playwright"
       ],
       "projects": [
-        "Repsol Descargos Web [.NET Framework 4.8, .NET 8] - Aplicación web,API y Webjobs para la gestión de Descargos de estaciones eléctricas",
-        "Repsol Descargos Mobile [.NET for Android] - Aplicación móvil para la gestión de Descargos de estaciones eléctricas",
-        "Repsol SEOS Trabajos [.NET Framework 4.8, MySQL] - Aplicación web para la gestión de trabajos de mantenimiento en estaciones eléctricas",
-        "SinVisitas [React, Node.js, MongoDB, PHP] - Aplicación web para gestión de alquileres e inmuebles",
-        "InnovaTracker [Vue.js, PostgreSQL, .NET 8] - Aplicación web para la gestión de proyectos y tareas",
-        "Equal [Angular, NestJS, PostgreSQL, .NET 8] - Aplicación web para la gestión de igualdad de género en empresas",
-        "IAltitude [.NET 8, WinForms] - Aplicación para gestiónar sesiones de hipoxia intermitente y entrenamiento en altura en sinmuladores de vuelo y altura"
+        {
+          "title": "Repsol Descargos Web",
+          "description": "Aplicación web, API y Webjobs para la gestión de Descargos de estaciones eléctricas",
+          "role": "",
+          "technologies": [".NET Framework 4.8", ".NET 8"]
+        },
+        {
+          "title": "Repsol Descargos Mobile",
+          "description": "Aplicación móvil para la gestión de Descargos de estaciones eléctricas",
+          "role": "",
+          "technologies": [".NET for Android"]
+        },
+        {
+          "title": "Repsol SEOS Trabajos",
+          "description": "Aplicación web para la gestión de trabajos de mantenimiento en estaciones eléctricas",
+          "role": "",
+          "technologies": [".NET Framework 4.8", "MySQL"]
+        },
+        {
+          "title": "Repsol SEOS Trabajos Mobile",
+          "description": "Aplicación móvil para la gestión de trabajos de mantenimiento en estaciones eléctricas",
+          "role": "",
+          "technologies": ["Java (Android)"]
+        },
+        {
+          "title": "SEOS Trabajos MX",
+          "description": "Aplicación web para la gestión de trabajos de mantenimiento en estaciones eléctricas",
+          "role": "",
+          "technologies": [".NET 8", "PostgreSQL"]
+        },
+        {
+          "title": "SEOS Trabajos MX Mobile",
+          "description": "Aplicación móvil para la gestión de trabajos de mantenimiento en estaciones eléctricas",
+          "role": "",
+          "technologies": ["Java (Android)"]
+        },
+        {
+          "title": "SinVisitas",
+          "description": "Aplicación web para gestión de alquileres e inmuebles",
+          "role": "",
+          "technologies": ["React", "Node.js", "MongoDB", "PHP"]
+        },
+        {
+          "title": "InnovaTracker",
+          "description": "Aplicación web para la gestión de proyectos y tareas",
+          "role": "",
+          "technologies": ["Vue.js", "PostgreSQL", ".NET 8"]
+        },
+        {
+          "title": "Equal",
+          "description": "Aplicación web para la gestión de igualdad de género en empresas",
+          "role": "",
+          "technologies": ["Angular", "NestJS", "PostgreSQL", ".NET 8"]
+        },
+        {
+          "title": "IAltitude",
+          "description": "Aplicación para gestionar sesiones de hipoxia intermitente y entrenamiento en altura en simuladores de vuelo y altura",
+          "role": "",
+          "technologies": [".NET 8", "WinForms"]
+        }
       ],
       "image": "/jobs/synit_bg.png",
       "logo": "/jobs/syndesis-logo.jpg",
@@ -90,8 +144,16 @@
         "Entity Framework"
       ],
       "projects": [
-        "Aplicación de gestión empresarial multiplataforma",
-        "Sistemas de reportes avanzados con exportación"
+        {
+          "title": "Aplicación de gestión empresarial multiplataforma",
+          "description": "Aplicación para gestionar diferentes aspectos de la empresa",
+          "technologies": ["C#", ".NET Framework", "WinForms", "SQL Server"]
+        },
+        {
+          "title": "Sistemas de reportes avanzados con exportación",
+          "description": "Sistema para generar reportes avanzados con opciones de exportación",
+          "technologies": ["C#", ".NET Framework", "SQL Server"]
+        }
       ],
       "image": "/jobs/comahue-bg.jpg",
       "logo": "/jobs/itcomahue_logo.jpg"
@@ -111,7 +173,13 @@
         "SQL Server",
         "ASP.NET"
       ],
-      "projects": ["Syndesis IT - Tercerización para proyectos de Syndesis IT"],
+      "projects": [
+        {
+          "title": "IQuality",
+          "description": "Sistema de gestión de calidad para empresas",
+          "technologies": ["C#", ".NET", "SQL Server", "JavaScript"]
+        }
+      ],
       "image": "/jobs/eximo_bg.png",
       "logo": "/jobs/eximo.jpg",
       "website": "https://eximo.com.ar",
@@ -121,27 +189,11 @@
   "skills": [
     {
       "category": "Lenguajes de Programación",
-      "items": [
-        "C#",
-        "JavaScript",
-        "TypeScript",
-        "Java",
-        "PHP",
-        "Python",
-        "Dart"
-      ]
+      "items": ["C#", "JavaScript", "Java", "PHP", "Python", "Dart"]
     },
     {
       "category": "Frontend",
-      "items": [
-        "React",
-        "Vue.js",
-        "Angular",
-        "HTML5",
-        "CSS3",
-        "Tailwind",
-        "Material Design"
-      ]
+      "items": ["React", "Vue.js", "Angular", "HTML5", "CSS3", "Tailwind"]
     },
     {
       "category": "Backend",
@@ -150,34 +202,46 @@
         ".NET Framework",
         "Node.js",
         "Express",
-        "NestJS",
-        "Laravel"
+        "NestJS"
       ]
     },
     {
       "category": "Bases de Datos",
-      "items": ["SQL Server", "MySQL", "PostgreSQL", "MongoDB", "Firebase"]
+      "items": ["SQL Server", "MySQL", "PostgreSQL", "MongoDB"]
     },
     {
       "category": "DevOps & Tools",
-      "items": [
-        "Docker",
-        "Git",
-        "CI/CD",
-        "Azure",
-        "AWS",
-        "Linux",
-        "GitHub Actions"
+      "items": ["Docker", "Git", "CI/CD", "Azure", "Kubernetes"]
+    }
+  ],
+  "courses": [
+    {
+      "name": "Curso Full Stack Web Developer",
+      "institution": "Educación IT",
+      "year": "2019",
+      "description": "Curso completo de desarrollo web Full Stack .NET, abarcando frontend (MVC), backend (.NET Framework) y bases de datos (SQL Server).",
+      "certifications": [
+        {
+          "name": "Entity Framework y LINQ",
+          "url": "https://www.educacionit.com/perfil/matias-alberto-morales-365288/certificado/39909"
+        },
+        {
+          "name": "Git: Desarrollo Colaborativo",
+          "url": "https://www.educacionit.com/perfil/matias-alberto-morales-365288/certificado/39409"
+        },
+        {
+          "name": "Introducción al Paradigma de Objetos",
+          "url": "https://www.educacionit.com/perfil/matias-alberto-morales-365288/certificado/39411"
+        }
       ]
     }
   ],
-  "couses": [],
   "education": [
     {
       "id": 1,
       "degree": "Licenciatura en Ciencias de la Computación",
       "institution": "Universidad Nacional del Comahue",
-      "year": "Pausado"
+      "year": "Incompleto"
     },
     {
       "id": 2,
