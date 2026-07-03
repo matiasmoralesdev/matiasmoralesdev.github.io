@@ -1,9 +1,9 @@
 <template>
   <footer class="footer">
     <div class="container">
-      <p>© 2026 Matías Alberto Morales. Todos los derechos reservados.</p>
+      <p>© 2026 Matías Morales. Todos los derechos reservados.</p>
       <p>Diseñado y desarrollado por <a href="https://matiasmoralesdev.github.io" target="_blank"
-          rel="noopener noreferrer">Matías Alberto Morales</a> en <a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer">Vue.js</a></p>
+          rel="noopener noreferrer">Matías Morales</a> en <a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer">Vue.js</a></p>
     </div>
   </footer>
 </template>

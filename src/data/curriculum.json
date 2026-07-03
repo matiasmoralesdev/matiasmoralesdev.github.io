@@ -1,8 +1,8 @@
 {
   "profile": {
-    "name": "Matías Alberto Morales",
+    "name": "Matías Morales",
     "title": "Senior Full Stack .NET Developer",
-    "subtitle": "Web • Mobile • Backend • DevOps",
+    "subtitle": "Backend • Frontend • Mobile • DevOps",
     "bio": "Desarrollador Full Stack apasionado por crear soluciones innovadoras",
     "image": "/profile.png",
     "cvPdf": "/cv_matias_morales.pdf",
@@ -278,15 +278,38 @@
       "certifications": [
         {
           "name": "Entity Framework y LINQ",
-          "url": "https://www.educacionit.com/perfil/matias-alberto-morales-365288/certificado/39909"
+          "url": "https://www.educacionit.com/perfil/matias-alberto-morales-365288/certificado/39909",
+          "thumbnail": "https://api.educacionit.com/pdf/certificados/matias-alberto-morales-365288/39909?content_type=jpeg&thumbnail=1"
         },
         {
           "name": "Git: Desarrollo Colaborativo",
-          "url": "https://www.educacionit.com/perfil/matias-alberto-morales-365288/certificado/39409"
+          "url": "https://www.educacionit.com/perfil/matias-alberto-morales-365288/certificado/39409",
+          "thumbnail": "https://api.educacionit.com/pdf/certificados/matias-alberto-morales-365288/39409?content_type=jpeg&thumbnail=1"
         },
         {
           "name": "Introducción al Paradigma de Objetos",
-          "url": "https://www.educacionit.com/perfil/matias-alberto-morales-365288/certificado/39411"
+          "url": "https://www.educacionit.com/perfil/matias-alberto-morales-365288/certificado/39411",
+          "thumbnail": "https://api.educacionit.com/pdf/certificados/matias-alberto-morales-365288/39411?content_type=jpeg&thumbnail=1"
+        },
+        {
+          "name": "HTML5: Fundamentos de una página Web",
+          "url": "https://www.educacionit.com/perfil/matias-alberto-morales-365288/certificado/39412",
+          "thumbnail": "https://api.educacionit.com/pdf/certificados/matias-alberto-morales-365288/39412?content_type=jpeg&thumbnail=1"
+        },
+        {
+          "name": "Introducción a Bases de Datos y SQL",
+          "url": "https://www.educacionit.com/perfil/matias-alberto-morales-365288/certificado/39258",
+          "thumbnail": "https://api.educacionit.com/pdf/certificados/matias-alberto-morales-365288/39258?content_type=jpeg&thumbnail=1"
+        },
+        {
+          "name": "Introducción a la programación en Javascript",
+          "url": "https://www.educacionit.com/perfil/matias-alberto-morales-365288/certificado/39416",
+          "thumbnail": "https://api.educacionit.com/pdf/certificados/matias-alberto-morales-365288/39416?content_type=jpeg&thumbnail=1"
+        },
+        {
+          "name": "Maquetación Web: HTML 5 y CSS",
+          "url": "https://www.educacionit.com/perfil/matias-alberto-morales-365288/certificado/39413",
+          "thumbnail": "https://api.educacionit.com/pdf/certificados/matias-alberto-morales-365288/39413?content_type=jpeg&thumbnail=1"
         }
       ]
     }
